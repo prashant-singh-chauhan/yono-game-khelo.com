@@ -140,11 +140,11 @@
                          onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex';">
                     <span class="items-center gap-2.5" style="display:none;">
                         <x-brand-mark class="w-10 h-10" />
-                        <span class="font-display font-bold text-lg hidden sm:block">{{ $portalTitle }}</span>
+                        <span class="font-display font-bold text-lg">{{ $portalTitle }}</span>
                     </span>
                 @else
                     <x-brand-mark class="w-10 h-10 drop-shadow-sm" />
-                    <span class="font-display font-bold text-lg hidden sm:block">{{ $portalTitle }}</span>
+                    <span class="font-display font-bold text-lg">{{ $portalTitle }}</span>
                 @endif
             </a>
 
