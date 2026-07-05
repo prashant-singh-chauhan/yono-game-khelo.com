@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
     {
         // ── Admin account ───────────────────────────────────────────────
         User::updateOrCreate(
-            ['email' => 'admin@yonogame.com'],
+            ['email' => 'yonogamekhelo@gmail.com'],
             [
-                'name'     => 'Administrator',
-                'password' => Hash::make('password'),
+                'name'     => 'Mann Chauhan',
+                'password' => Hash::make('temp#@785612'),
             ]
         );
 
@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
             'portal_title'          => 'Yono Game Khelo',
             'portal_tagline'        => 'All Yono Games, Rummy Apps & Slots Games',
             'telegram_join_url'     => 'https://t.me/+omG',
-            'whatsapp_number'       => '+9198765432',
-            'brand_logo_url'        => 'https://allnewyonoapps.com/logo.jpg',
+            'whatsapp_number'       => '+918920858700',
+            'brand_logo_url'        => null,
             'header_gradient_start' => '#6366F1',
             'header_gradient_end'   => '#8B5CF6',
             'theme_accent'          => '#6366F1',

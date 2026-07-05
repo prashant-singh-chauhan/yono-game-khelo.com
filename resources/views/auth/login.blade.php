@@ -74,8 +74,8 @@
                 <div>
                     <label for="email" class="field-label">Email address</label>
                     <input id="email" name="email" type="email" autocomplete="username" required autofocus
-                           value="{{ old('email', 'admin@yonogame.com') }}"
-                           class="field @error('email') !border-danger @enderror" placeholder="admin@yonogame.com">
+                           value="{{ old('email') }}"
+                           class="field @error('email') !border-danger @enderror" placeholder="you@example.com">
                     @error('email') <p class="text-danger text-sm mt-1.5">{{ $message }}</p> @enderror
                 </div>
 
@@ -103,10 +103,6 @@
                     <span>Sign in to dashboard</span>
                 </button>
             </form>
-
-            <div class="mt-6 p-3.5 rounded-xl text-sm" style="background:var(--surface-2);border:1px solid var(--line);">
-                <p class="text-muted"><span class="font-semibold text-text-soft">Demo credentials</span> — admin@yonogame.com / password</p>
-            </div>
         </div>
     </div>
 
