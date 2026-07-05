@@ -90,7 +90,35 @@
             <h2 class="font-display font-bold text-lg">Recently Modified Apps</h2>
             <a href="{{ route('admin.apps.index') }}" class="ml-auto text-brand font-semibold text-sm hover:underline">View All Apps</a>
         </div>
-        <div class="overflow-x-auto">
+        {{-- Mobile: stacked cards (avoids horizontal table scroll) --}}
+        <div class="md:hidden divide-y" style="border-color:var(--line);">
+            @forelse ($recentApps as $app)
+                <div class="p-4 sm:px-6">
+                    <div class="flex items-center gap-3">
+                        <x-app-logo :app="$app" size="w-11 h-11" />
+                        <div class="min-w-0 flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold truncate">{{ $app->name }}</span>
+                                @if ($app->is_new_release) <span class="badge badge-success shrink-0">New</span> @endif
+                            </div>
+                            <code class="text-muted text-[0.8rem]">/{{ $app->slug }}</code>
+                        </div>
+                        <a href="{{ route('admin.apps.edit', $app) }}" class="btn btn-ghost btn-sm text-brand shrink-0"><x-icon name="edit" class="w-4 h-4" />Edit</a>
+                    </div>
+                    <dl class="grid grid-cols-2 gap-x-4 gap-y-2 mt-3 text-sm">
+                        <div class="flex items-center justify-between gap-2"><dt class="text-muted">Bonus</dt><dd class="font-semibold tabular-nums">₹{{ number_format($app->sign_up_bonus) }}</dd></div>
+                        <div class="flex items-center justify-between gap-2"><dt class="text-muted">Min. Withdraw</dt><dd class="font-semibold tabular-nums">₹{{ number_format($app->min_withdrawal) }}</dd></div>
+                        <div class="flex items-center justify-between gap-2"><dt class="text-muted">Rating</dt><dd class="inline-flex items-center gap-1 font-semibold"><span class="text-gold"><x-icon name="star" class="w-4 h-4" style="fill:currentColor" /></span>{{ $app->rating }}</dd></div>
+                        <div class="flex items-center justify-between gap-2"><dt class="text-muted">Updated</dt><dd class="text-muted text-right">{{ $app->updated_at->diffForHumans() }}</dd></div>
+                    </dl>
+                </div>
+            @empty
+                <div class="text-center text-muted py-10 px-4">No apps yet. <a href="{{ route('admin.apps.create') }}" class="text-brand font-semibold">Add your first app</a>.</div>
+            @endforelse
+        </div>
+
+        {{-- Desktop: table --}}
+        <div class="hidden md:block overflow-x-auto">
             <table class="data-table min-w-[680px]">
                 <thead>
                     <tr>
