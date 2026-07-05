@@ -1,4 +1,4 @@
-@props(['app'])
+@props(['app', 'number' => null])
 
 @php
     $shareUrl  = route('app.show', $app);
@@ -8,6 +8,12 @@
 <div class="card card-hover p-5 flex flex-col group relative">
     {{-- Stretched link: whole card navigates to the app detail page --}}
     <a href="{{ $shareUrl }}" class="absolute inset-0 z-0 rounded-[var(--radius-xl2)]" aria-label="{{ $app->name }} details"></a>
+
+    {{-- Rank / count bubble (top-left corner of the card) --}}
+    @isset($number)
+        <span class="absolute -top-3 -left-3 z-20 pointer-events-none min-w-[1.6rem] h-[1.6rem] px-1.5 rounded-full grid place-items-center text-white font-bold text-xs tabular-nums shadow-md ring-2 ring-[var(--surface-solid)]"
+              style="background:linear-gradient(135deg,var(--brand),var(--brand-2));" aria-hidden="true">{{ $number }}</span>
+    @endisset
 
     {{-- Share menu (top-right corner) --}}
     <div class="absolute top-3.5 right-3.5 z-20" x-data="{ open: false }" @click.outside="open = false" @keydown.escape="open = false">

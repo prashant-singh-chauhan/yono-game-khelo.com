@@ -181,7 +181,7 @@
         @else
             <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 stagger">
                 @foreach ($apps as $app)
-                    <x-game-card :app="$app" />
+                    <x-game-card :app="$app" :number="$loop->iteration" />
                 @endforeach
             </div>
         @endif

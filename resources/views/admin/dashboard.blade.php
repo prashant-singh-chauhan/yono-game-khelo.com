@@ -1,24 +1,24 @@
 <x-admin title="Dashboard Overview">
 
     {{-- Stat cards --}}
-    <div class="grid gap-4 sm:gap-5 sm:grid-cols-2 xl:grid-cols-3 stagger">
+    <div class="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3 stagger">
         <div class="card card-hover p-5 flex items-center gap-4">
-            <div class="icon-tile" style="background:linear-gradient(135deg,#4f46e5,#6366f1);"><x-icon name="gamepad" class="w-7 h-7" /></div>
-            <div>
+            <div class="icon-tile shrink-0" style="background:linear-gradient(135deg,#4f46e5,#6366f1);"><x-icon name="gamepad" class="w-7 h-7" /></div>
+            <div class="min-w-0">
                 <p class="font-display font-bold text-3xl tabular-nums">{{ number_format($stats['total_apps']) }}</p>
                 <p class="text-muted text-sm">Total Applications</p>
             </div>
         </div>
         <div class="card card-hover p-5 flex items-center gap-4">
-            <div class="icon-tile" style="background:linear-gradient(135deg,#059669,#10b981);"><x-icon name="star" class="w-7 h-7" /></div>
-            <div>
+            <div class="icon-tile shrink-0" style="background:linear-gradient(135deg,#059669,#10b981);"><x-icon name="star" class="w-7 h-7" /></div>
+            <div class="min-w-0">
                 <p class="font-display font-bold text-3xl tabular-nums">{{ number_format($stats['new_releases']) }}</p>
                 <p class="text-muted text-sm">New Releases</p>
             </div>
         </div>
         <div class="card card-hover p-5 flex items-center gap-4">
-            <div class="icon-tile" style="background:linear-gradient(135deg,#ea580c,#f59e0b);"><x-icon name="layers" class="w-7 h-7" /></div>
-            <div>
+            <div class="icon-tile shrink-0" style="background:linear-gradient(135deg,#ea580c,#f59e0b);"><x-icon name="layers" class="w-7 h-7" /></div>
+            <div class="min-w-0">
                 <p class="font-display font-bold text-3xl tabular-nums">{{ number_format($stats['other_apps']) }}</p>
                 <p class="text-muted text-sm">Other Category Apps</p>
             </div>
@@ -74,9 +74,9 @@
                     ];
                 @endphp
                 @foreach ($meta as [$k, $v])
-                    <div class="flex items-center justify-between gap-4 py-2.5 {{ !$loop->last ? 'border-b' : '' }}" style="border-color:var(--line);">
-                        <dt class="text-muted text-sm">{{ $k }}</dt>
-                        <dd class="font-semibold text-sm text-right">{{ $v }}</dd>
+                    <div class="flex items-start justify-between gap-3 py-2.5 {{ !$loop->last ? 'border-b' : '' }}" style="border-color:var(--line);">
+                        <dt class="text-muted text-sm shrink-0">{{ $k }}</dt>
+                        <dd class="font-semibold text-sm text-right min-w-0 break-words">{{ $v }}</dd>
                     </div>
                 @endforeach
             </dl>
