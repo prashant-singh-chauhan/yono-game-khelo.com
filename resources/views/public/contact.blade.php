@@ -14,12 +14,12 @@
                     <div class="w-11 h-11 rounded-xl grid place-items-center text-white shrink-0" style="background:linear-gradient(135deg,#2AABEE,#229ED9);"><x-icon name="send" class="w-5 h-5" /></div>
                     <div><p class="font-semibold">Telegram</p><a href="{{ Setting::get('telegram_join_url','#') }}" target="_blank" class="text-brand text-sm hover:underline">Join our channel</a></div>
                 </div>
-                @if ($wa = Setting::get('whatsapp_number'))
+                {{-- @if ($wa = Setting::get('whatsapp_number'))
                     <div class="card p-5 flex items-center gap-4">
                         <div class="w-11 h-11 rounded-xl grid place-items-center text-white shrink-0" style="background:linear-gradient(135deg,#25D366,#128C7E);"><x-icon name="mail" class="w-5 h-5" /></div>
                         <div><p class="font-semibold">WhatsApp</p><a href="https://wa.me/{{ preg_replace('/[^0-9]/','',$wa) }}" class="text-brand text-sm hover:underline">{{ $wa }}</a></div>
                     </div>
-                @endif
+                @endif --}}
                 <div class="card p-5 flex items-center gap-4">
                     <div class="w-11 h-11 rounded-xl grid place-items-center text-white shrink-0" style="background:linear-gradient(135deg,var(--brand),var(--brand-2));"><x-icon name="globe" class="w-5 h-5" /></div>
                     <div><p class="font-semibold">Response time</p><p class="text-muted text-sm">Usually within 24 hours</p></div>

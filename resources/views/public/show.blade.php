@@ -69,8 +69,11 @@
         <a href="{{ route('home') }}" class="btn btn-ghost btn-sm mb-5"><x-icon name="chevron-left" class="w-4 h-4" /> Back to all apps</a>
 
         {{-- Hero --}}
-        <div class="card p-6 sm:p-8 relative overflow-hidden">
-            <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full opacity-20 blur-3xl" style="background:linear-gradient(135deg,var(--brand),var(--brand-2));"></div>
+        <div class="card p-6 sm:p-8 relative">
+            {{-- Decorative blob, clipped to the card so it doesn't spill (kept off the card's own overflow so dropdowns can escape) --}}
+            <div class="absolute inset-0 overflow-hidden pointer-events-none" style="border-radius:var(--radius-xl2);">
+                <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full opacity-20 blur-3xl" style="background:linear-gradient(135deg,var(--brand),var(--brand-2));"></div>
+            </div>
             <div class="relative flex flex-col sm:flex-row gap-6 items-start">
                 <x-app-logo :app="$app" size="w-24 h-24" />
                 <div class="flex-1 min-w-0">
