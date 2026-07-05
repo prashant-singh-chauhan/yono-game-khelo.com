@@ -1,0 +1,23 @@
+<svg viewBox="0 0 360 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yono Game Khelo">
+    <defs>
+        <linearGradient id="g" x1="8" y1="8" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6366F1"/>
+            <stop offset="0.55" stop-color="#7C5CF6"/>
+            <stop offset="1" stop-color="#A855F7"/>
+        </linearGradient>
+        <linearGradient id="w" x1="112" y1="30" x2="300" y2="70" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6366F1"/>
+            <stop offset="1" stop-color="#A855F7"/>
+        </linearGradient>
+    </defs>
+
+    <!-- mark -->
+    <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#g)"/>
+    <path d="M32 30 L48 49 L64 30" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48 49 L48 64" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M68 22 l2 5.2 5.2 2 -5.2 2 -2 5.2 -2 -5.2 -5.2 -2 5.2 -2z" fill="#22D3EE"/>
+
+    <!-- wordmark -->
+    <text x="108" y="52" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="34" font-weight="700" fill="url(#w)">Yono</text>
+    <text x="108" y="78" font-family="'Space Grotesk','Segoe UI',sans-serif" font-size="20" font-weight="600" letter-spacing="1.5" fill="#94A3B8">GAMES KHELO</text>
+</svg>
