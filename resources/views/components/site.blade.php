@@ -79,6 +79,9 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="author" content="{{ $portalTitle }}">
     <link rel="canonical" href="{{ $canonicalUrl }}">
+    {{-- hreflang: single English (India) version — self-reference + x-default --}}
+    <link rel="alternate" hreflang="en-in" href="{{ $canonicalUrl }}">
+    <link rel="alternate" hreflang="x-default" href="{{ $canonicalUrl }}">
     <meta name="theme-color" content="{{ $gStart }}">
 
     {{-- Open Graph --}}
