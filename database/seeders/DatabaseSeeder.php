@@ -44,50 +44,7 @@ class DatabaseSeeder extends Seeder
             'telegram_chat_id'      => '',
         ]);
 
-        // ── Sample gaming apps ──────────────────────────────────────────
-        $samples = [
-            ['Yono Vip', 'yono-vip', 551, 4.5, '665K'],
-            ['YN 777', 'yn-777', 251, 4.8, '576K'],
-            ['Boss Rummy', 'boss-rummy', 51, 4.5, '445K'],
-            ['Rummy 888', 'rummy-888', 88, 4.4, '99.7K'],
-            ['Hindi 777', 'hindi-777', 151, 4.6, '54.7K'],
-            ['Maha Games', 'maha-games', 66, 4.5, '178.5K'],
-            ['Yono Games', 'yono-games', 51, 4.7, '52.7K'],
-            ['Yono Rummy', 'yono-rummy', 661, 4.7, '32.8K'],
-            ['567 Slots', '567-slots', 44, 4.7, '72K'],
-            ['MBM Bet', 'mbm-bet', 51, 4.3, '388K'],
-            ['Game Rummy', 'game-rummy', 229, 4.8, '122K'],
-            ['IND Slots', 'ind-slots', 88, 4.7, '588K'],
-            ['789 Jackpot', '789-jackpot', 121, 4.5, '722K'],
-            ['Go Rummy', 'go-rummy', 51, 4.8, '642K'],
-            ['101Z App', '101z-app', 544, 4.8, '542K'],
-            ['Spin 777', 'spin-777', 220, 4.9, '210K'],
-            ['Jaiho Slots', 'jaiho-slots', 444, 4.8, '331K'],
-            ['Yes Spin', 'yes-spin', 336, 4.3, '188K'],
-        ];
-
-        foreach ($samples as $i => [$name, $slug, $bonus, $rating, $votes]) {
-            App::updateOrCreate(['slug' => $slug], [
-                'name'            => $name,
-                'download_link'   => 'https://example.com/download/'.$slug.'.apk',
-                'is_new_release'  => true,
-                'category'        => 'New Release',
-                'sign_up_bonus'   => $bonus,
-                'min_withdrawal'  => 100,
-                'rating'          => $rating,
-                'votes'           => $votes,
-                'app_size'        => rand(38, 92).'MB',
-                'short_intro'     => "Register on {$name} and claim up to ₹{$bonus} welcome bonus instantly. Low withdrawal minimum of just ₹100.",
-                'about_paragraph' => "{$name} is one of the most trusted rummy & slots platforms in 2026, offering secure gameplay, instant withdrawals and 24/7 support. Millions of players enjoy daily tournaments and lightning-fast payouts.",
-                'features'        => "Welcome Bonus: Claim up to ₹{$bonus} instantly\nLow withdrawal: Minimum is ₹100\nMulti-language Support\nInstant UPI Withdrawals",
-                'download_steps'  => "Click Download to get the APK file\nGo to Settings > Enable Unknown Sources\nOpen APK and tap Install\nVerify phone number and get bonus",
-                'seo_title'       => "{$name} App Yono – Free Welcome Bonus ₹{$bonus}",
-                'seo_keywords'    => "{$name}, {$name} download, {$name} APK",
-                'promo_code'      => strtoupper(Str::slug($name, '')).$bonus,
-                'created_at'      => now()->subDays(21 - $i),
-                'updated_at'      => now()->subDays(21 - $i),
-            ]);
-        }
+       $this->call(AppSeeder::class);
 
         // ── Sample reviews ──────────────────────────────────────────────
         $vip = App::where('slug', 'yono-vip')->first();
