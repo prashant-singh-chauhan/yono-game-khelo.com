@@ -131,6 +131,15 @@
             --ring: color-mix(in srgb, {{ $accent }} 45%, transparent);
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26X0VCJ7X0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-26X0VCJ7X0');
+    </script>
 </head>
 <body class="min-h-dvh flex flex-col" x-data="{ menu: false }">
 
