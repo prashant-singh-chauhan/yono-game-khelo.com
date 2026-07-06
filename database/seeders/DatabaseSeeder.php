@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             'site_disclaimer'       => "Yonogamekhelo.com is an independent platform. We don't own, manage, or operate any of the apps you see listed here. Our website is designed to help you discover and learn about different gaming options, but we don't control how those apps work or handle their services.\n\nIt's important to know that rummy apps can be addictive for some people. They also carry financial risks, especially if you're not careful with your spending. That's why we strongly recommend using these apps responsibly. If you choose to play, please set limits and stay aware of your habits.",
             'banned_states'         => 'Rummy, even as a skill-based game, is not legal everywhere. It is banned by the government in the following states: Andhra Pradesh, Sikkim, Nagaland, Assam, Arunachal Pradesh, Tamil Nadu, Odisha, and Telangana. If you live in any of these places, you should not download or play rummy apps.',
             'seo_keywords'          => 'Yono Game Khelo, Yono Rummy, Yono Slots, Yono Teen Patti, Yono VIP, Jaiho Rummy, Spin777, Rummy 365, All Yono Apps, Yono Download',
-            'seo_description'       => 'Download All Yono Rummy, Slots & Teen Patti Apps from https://allnewyonoapps.com. Get ₹500–₹1500 Sign Up Bonus, Instant Withdraw & Secure Gaming 2026.',
+            'seo_description'       => 'Download All Yono Rummy, Slots & Teen Patti Apps from https://yonogamekhelo.com. Get ₹500–₹1500 Sign Up Bonus, Instant Withdraw & Secure Gaming 2026.',
             'social_card_url'       => '',
             'telegram_bot_token'    => '',
             'telegram_chat_id'      => '',
