@@ -20,7 +20,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robots" content="noindex, nofollow">
     <title>{{ $title }} · Yono Game Khelo</title>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/ico" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="manifest" href="/site.webmanifest" />
     {{-- Set theme before paint to avoid flash --}}
     <script>
         (function () {
