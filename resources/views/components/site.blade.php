@@ -205,7 +205,7 @@
                         <span class="font-display font-bold text-lg">{{ $portalTitle }}</span>
                     </span>
                 @else
-                    <x-brand-mark class="w-10 h-10 drop-shadow-sm" />
+                    <x-brand-mark class="w-11 h-11 drop-shadow-sm" />
                     <span class="font-display font-bold text-lg">{{ $portalTitle }}</span>
                 @endif
             </a>
