@@ -24,7 +24,7 @@
     $keywords = Setting::get('seo_keywords');
     $fullTitle = $title ? $title . ' · ' . $portalTitle : $portalTitle . ' — ' . $tagline;
     $canonicalUrl = $canonical ?? url()->current();
-    $socialImage = $ogImage ?? Setting::get('social_card_url') ?: ($logoUrl ?: asset('images/logo.svg'));
+    $socialImage = $ogImage ?? Setting::get('social_card_url') ?: ($logoUrl ?: asset('images/logo.png'));
     // Ensure OG/Twitter image is an absolute URL.
     if ($socialImage && !\Illuminate\Support\Str::startsWith($socialImage, ['http://', 'https://'])) {
         $socialImage = url($socialImage);
